@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+body {
+  padding: 0px 100px;
+}
+h5 {
+  color: black;
+}
+.phanDau {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.phanDau .trai {
+  background-color: #9999cc;
+  padding: 50px 40px;
+  display: inline;
+  width: 200px;
+  color: white;
+}
+.phanDau .phai {
+  background-color: #edeeef;
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-left:20px;
+}
+.item-card:hover{
+    background-color: rgb(170, 120, 120);
+}
+.item-card {
+  margin: 10px 10px;
+  background-color: white;
+  padding: 5px 20px;
+}
+a {
+  text-decoration: none;
+}
+.phanGiua{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.text1{
+    background-color: #edeeef;
+  margin-left: 20px;
+  padding-left: 30px;
+  padding-top: 50px;
+}
+.moredetail{
+    background-color: rgb(180, 132, 132);
+    width: 180px;
+    height: 40px;
+    color: white;
+    text-align: center; 
+    padding-top: 15px;
+}
+.moredetail:hover{
+    background-color: rgb(133, 89, 89);
+}
+.nav2{
+    display: flex;
+    flex-direction: row;
+    background-color: #9999cc;
+    height: 200px;
+    margin-top: 20px;
+    align-items: center;
+    padding-left: 150px;
+}
+.phan2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.phai2{
+    display: flex;
+    flex-direction: column;
+}
+.trai2{
+    margin-left: 20px;
+}
+.tren2{
+    background-color: rgb(215, 215, 233);
+    flex-basis: 50%;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-right: 30px;
+}
+.duoi2{
+    background-color: rgb(157, 157, 180);
+    margin-top: 20px;
+    flex-basis: 50%;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-right: 30px;
+}
+.readmore{
+    background-color: rgb(78, 78, 78); 
+    padding: 10px 10px 10px 10px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    margin-left: 155px;
+    margin-top: 30px;
+}
+.readmore:hover{
+background-color: grey;
+}
+.tren3{
+    background-color: #9999cc;
+    height: 100px;
+}
+.nav3{
+    display: flex;
+    flex-direction: row;
+    padding-left: 300px;
+}
+.item2{
+    color: black;
+    padding-right: 30px;
+    padding-left: 50px;
+}
+.item2:hover{
+    color: white;
+}
+.duoi3{
+    display: inline;
+}
+.imgall{
+    width: 150px;
+    margin: 20px 10px 10px;
+}
+.tren4{
+    background-color: rgb(131, 180, 131);
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+.duoi4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.map{
+    flex-basis: 27%;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.form{
+    flex-basis: 43%;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: #e9e9fa;
+}
+.text4{
+    flex-basis: 30%;
+    margin-top: 20px;
+    background-color: #e9e9fa;
+    padding-left: 20px;
+    padding-top: 60px;
+    padding-right: 20px;
+}
+.house{
+    color: white;
+    width: 300px;
+    height: 300px;
+    font-size: 100px;
+    padding-top: 30px;
+}
+.id1{
+    margin-right: 70px;
+    text-align: center;
+}
+.id2{
+    margin-right: 70px;
+    text-align: center;
+}
+.id3{
+    margin-right: 70px;
+    text-align: center;
+}
+.textid{
+    color: white;
+}
+.title3{
+    text-align: end;
+    margin-right: 30px;
+}
+.submit label {
+            font-weight: bold;
+            color: #555;
+        }
+        .submit input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .submit input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .duoi3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .imgall {
+        opacity: 0; /* Initially hide all images */
+        transition: opacity 0.5s ease; /* Smooth transition for opacity change */
+    }
+    
+    /* Animation to fade in images */
+    @keyframes fadeIn {
+        from {
+            opacity: 0; /* Start with opacity 0 */
+        }
+        to {
+            opacity: 1; /* End with opacity 1 */
+        }
+    }
+    
+    /* Apply animation to each image */
+    .imgall.animate {
+        animation: fadeIn 1s ease forwards; /* Run fadeIn animation */
+    }
+    </style>
+  </head>
+  <body>
+    <div class="phanDau">
+     
+        <div class="trai"><h2>COMPARTO</h2></div>
+     
+        <div class="phai">
+        <a href="#sect1">
+          <div class="item-card">
+            <h5>.01</h5>
+            <h5>About</h5>
+          </div>
+        </a>
+        <a href="#sect2">
+          <div class="item-card">
+            <h5>.02</h5>
+            <h5>Services</h5>
+          </div>
+        </a>
+        <a href="#sect3">
+          <div class="item-card">
+            <h5>.03</h5>
+            <h5>Gallery</h5>
+          </div>
+        </a>
+        <a href="#sect4">
+          <div class="item-card">
+            <h5>.04</h5>
+            <h5>Contact</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="phanGiua">
+        <div class="img1">
+            <img src="./img (1)/comparto-image-01.jpg" width="600px">
+        </div>
+        <div class="text1">
+            <h3 id="sect1">.01 Comparto CSS Layout</h3><br><br>
+            <p>Comparto is a custom light-weight CSS layout for your website. You can easily adapt and use this for your commercial or personal websites. Feel free to use it.
+<br><br>
+                You cannot redistribute this template ZIP file in any template collection website. Please contact TemplateMo if you have any question.
+                <br><br>
+                Nunc sed gravida elit. Curabitur rutrum elit id lobortis viverra. Fusce at libero dui.</p>
+<a href="#sect2">
+    <div class="moredetail">More Detail</div>
+</a>
+        </div>
+    </div>
+    <div class="nav2">
+        <div class="id1">        <a href="#sect2" class="house"><i class="fa-solid fa-warehouse"></i></a> <div class="textid">Aenean vel est id massa<br> condimentum</div></div>
+        <div class="id2">        <a href="#sect3" class="house"><i class="fa-solid fa-chart-column"></i> </a><div class="textid">Suspendisse interdum lectus<br> purus</div></div>
+        <div class="id3">        <a href="#sect4" class="house"><i class="fa-regular fa-images"></i> </a><div class="textid">Nulla ac sodales est vel iaculis<br> purus</div></div>
+    </div>
+    <div class="phan2">
+        <div class="phai2">
+            <div class="tren2">
+                <h3 id="sect2">.02 Aliquam pretium hendrerit</h3><br><br>
+                <div>Cras tempus, velit amet facilisis venenatis, erat felis imperdiet lectus, at posuere elit metus. Title #333 BG #F2F2F2
+<br><br>
+<!-- text2 -->
+                    Nam iaculis, urna ut laoreet aliquam, massa magna dapibus. Text #666</div>
+            </div>
+            <div class="duoi2">
+            <!-- text2 -->
+                <div>Nam iaculis, urna ut laoreet aliquam, massa magna dapibus nibh, at pellentesque lectus odio non risus. Nulla ac sodales est, vel iaculis. Text #333 . BG #DDD</div>
+                <a href="#sect3">
+                    <div class="readmore">Read More</div>
+                </a>
+            </div>
+
+        </div>
+        <div class="trai2">
+            <img src="./img (1)/comparto-image-02.jpg" width="570px">
+        </div>
+    </div>
+    <div class="phan3">
+        <div class="tren3">
+            <div class="title3"><h3 id="sect3">.03 The Gallery Section</h3></div>
+            <div class="nav3">           
+                 <a href="#" class="show-all-link">
+                <div class="item2 showall">Show All  .</div>
+            </a>
+            <a href="#" class="nature-link">
+                <div class="item2 nature">Nature  .</div>
+            </a>
+            <a href="#" class="animals-link">
+                <div class="item2 animals">Animals  .</div>
+            </a>
+            <a href="#" class="people-link">
+                <div class="item2 people">People  .</div>
+            </a></div>
+        </div>
+        <div class="duoi3">
+            <img src="./img (1)/gallery/gallery-item-01.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-02.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-03.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-04.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-05.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-06.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-07.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-08.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-09.jpg" alt="" class="imgall">
+            <img src="./img (1)/gallery/gallery-item-10.jpg" alt="" class="imgall">
+        </div>
+    </div>
+    <div class="phanCuoi">
+        <div class="tren4">
+            <h3 id="sect4">.04 Contact Us</h3>
+        </div>
+        <div class="duoi4">
+            <div class="map"><img src="./img (1)/Capture.PNG" width="300px"></div>
+            <div class="form">
+                <form id="myForm" class="submit">
+                    <label for="Name">Name :</label><br>
+                    <input type="text" id="Name" placeholder="name"><br>
+                    <span id="nameError" class="error"></span><br>
+                    
+                    <label for="Email">Email :</label><br>
+                    <input type="text" id="Email" placeholder="email"><br>
+                    <span id="emailError" class="error"></span><br>
+                    
+                    <label for="Message">Message :</label><br>
+                    <input type="text" id="Message" placeholder="message"><br>
+                    <span id="messageError" class="error"></span><br>
+                    
+                    <input type="submit" id="submit">
+                </form>
+            </div>
+            
+            <div class="text4">
+                Pellentesque egestas odio sed tellus dictum, vel lobortis ante vehicula.
+<br><br>
+Morbi eget accumsan libero, non tincidunt felis.
+<br><br>
+Tel: 010-020-0990
+<br>
+Email: info@company.com
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/789e888335.js" crossorigin="anonymous"></script>
+    <script>    document.addEventListener("DOMContentLoaded", function() {
+        // Select all images
+        var images = document.querySelectorAll('.imgall');
+        
+        // Loop through each image and add the 'animate' class to trigger animation
+        images.forEach(function(image) {
+            image.classList.add('animate');
+        });
+    });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all anchor elements
+            var links = document.querySelectorAll('a');
+    
+            // Loop through each anchor element
+            links.forEach(function(link) {
+                // Add click event listener
+                link.addEventListener('click', function(e) {
+                    // Prevent default behavior (navigation)
+                    e.preventDefault();
+    
+                    // Delay before allowing navigation (in milliseconds)
+                    var delay = 1000; // Adjust as needed
+                    
+                    // Execute the navigation after the delay
+                    setTimeout(function() {
+                        window.location.href = link.href;
+                    }, delay);
+                });
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        var name = document.getElementById("Name").value;
+        var email = document.getElementById("Email").value;
+        var message = document.getElementById("Message").value;
+        var nameError = document.getElementById("nameError");
+        var emailError = document.getElementById("emailError");
+        var messageError = document.getElementById("messageError");
+        var isValid = true;
+
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+
+        if (name.trim() === "") {
+            nameError.textContent = "Name is required";
+            isValid = false;
+        }
+
+        if (email.trim() === "") {
+            emailError.textContent = "Email is required";
+            isValid = false;
+        } else if (!isValidEmail(email)) {
+            emailError.textContent = "Invalid email format";
+            isValid = false;
+        }
+
+        if (message.trim() === "") {
+            messageError.textContent = "Message is required";
+            isValid = false;
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+
+    function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+</script>
+    <script src="./app.js"></script>
+</body>
+</html>
